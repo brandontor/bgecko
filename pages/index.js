@@ -3,7 +3,9 @@ import Image from 'next/image'
 import styles from '../styles/Layout.module.css'
 import Link from 'next/link'
 
-export default function Home() {
+export default function Home(data) {
+
+  console.log(data);
   return (
     <div className={styles.container}>
       <Head>
@@ -28,3 +30,4 @@ export default function Home() {
     </div>
   )
 }
+
