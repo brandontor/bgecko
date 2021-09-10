@@ -1,4 +1,5 @@
 import React from 'react'
+import SidebarFrame from '../components/SidebarFrame'
 
 function Home() {
     return (
