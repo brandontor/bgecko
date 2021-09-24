@@ -1,0 +1,27 @@
+.SideBarFrame {
+    width: 256px;
+    height: 255px;
+    border-bottom: 2px solid #5e81ac;
+    border-right: 2px solid #5e81ac;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Mulish', sans-serif;
+}
+
+.profilePic {
+    height: 98px;
+    width: 99px;
+}
+
+.frameText {
+    font-family: 'Mulish', sans-serif;
+}
+
+.h3 {
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: #88C0D0;
+}
