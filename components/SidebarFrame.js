@@ -1,14 +1,19 @@
 import React from 'react'
 import Button from '@material-ui/core/Button'
-import { Avatar } from '@material-ui/core'
+import Avatar  from '@material-ui/core/Avatar'
+import style from './SidebarFrame.module.css'
 
 function SidebarFrame() {
+
+
+
+
     return (
-        <div className="Sidebarframe">
-            <Avatar src="./Assets/IMG-0750.jpg"/>
-            <div className="frameText">
-                <h3>Brandon</h3>
-                <Button variant="contained" color="secondary" size="small">Log Out</Button>
+        <div className={style.SideBarFrame}>
+            <Avatar src="/IMG-0750.jpg" style={{height: '98px', width: '99px'}}/>
+            <div className={style.frameText}>
+                <h3 className={style.h3}>Brandon</h3>
+                <Button variant="contained" style={{backgroundColor: '#BF616A', color: '#E5E9F0', width: '90px', height: '25px', fontSize: '12px', paddingTop: '10px', fontWeight: '700'}}>Log Out</Button>
             </div>
         </div>
     )
