@@ -6,7 +6,7 @@ function Layout({ children }) {
     return (
         <div className={style.layout}>
             <Sidebar/>
-            <main>
+            <main className={style.main}>
                 {children}
             </main>
         </div>
