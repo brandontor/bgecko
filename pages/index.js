@@ -1,12 +1,21 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import Link from 'next/link'
+import Button from '@mui/material/Button';
 import style from './index.module.css'
 
 
 export default function Home(data) {
 
   console.log(data);
+
+  const buttonStyles = {
+    backgroundColor: '#BF616A',
+    color: '#E5E9F0',
+    fontSize: '1.0em',
+    paddingTop: '10px',
+    fontWeight: '700'
+}
+
   return (
     <div>
       <Head>
@@ -20,8 +29,9 @@ export default function Home(data) {
       </Head>
 
       <main className={style.welcomePage}>
-        <div>
-          <h1>Welcome to bGecko<i className="fab fa-bitcoin"></i></h1>
+        <div className={style.textWrapper}>
+          <h1>Welcome to bGecko <i className="fab fa-bitcoin" style={{color: "#f2a900"}}></i></h1>
+          <Button variant="contained" style={buttonStyles}>Sign In</Button>
         </div> 
       </main>
     </div>

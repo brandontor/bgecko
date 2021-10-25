@@ -1,9 +1,19 @@
 .welcomePage{
     z-index: 0;
-    background-color: white;
+    background-color: #2E3440;
+    color: #88C0D0;
     height: 100%;
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textWrapper{
+    display: flex;
+    flex-direction: column;
+    height: 50%;
 }
