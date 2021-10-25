@@ -10,17 +10,14 @@ function SidebarFrame() {
         color: '#E5E9F0',
         width: '90px',
         height: '25px',
-        fontSize: '12px',
+        fontSize: '0.6em',
         paddingTop: '10px',
         fontWeight: '700'
     }
 
     const avatarStyles = {
-        height: '98px',
-        width: '99px'
+        height: '30%'
     }
-
-
 
     return (
         <div className={style.sideBarFrame}>
