@@ -2,10 +2,11 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Button from '@mui/material/Button';
 import style from './index.module.css'
-import { googleSignIn } from "../lib/auth.js";
+import { googleSignIn, signedIn } from "../lib/auth.js";
 
 export default function Home(data) {
 
+ //need to refresh page after signing in
   console.log(data);
 
   const buttonStyles = {
@@ -31,7 +32,8 @@ export default function Home(data) {
       <main className={style.welcomePage}>
         <div className={style.textWrapper}>
           <h1>Welcome to bGecko <i className="fab fa-bitcoin" style={{color: "#f2a900"}}></i></h1>
-          <Button variant="contained" style={buttonStyles} onClick={googleSignIn}>Sign In</Button>
+          {signedIn ? <Button variant="contained" style={buttonStyles}><Link href="/home"><a>Continue</a></Link></Button> : <Button variant="contained" style={buttonStyles} onClick={googleSignIn}>Sign In</Button>}
+          
         </div> 
       </main>
     </div>
