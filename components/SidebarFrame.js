@@ -27,7 +27,7 @@ function SidebarFrame() {
 
     return (
         <div className={style.sideBarFrame}>
-            <Avatar src="/IMG-0750.jpg" style={avatarStyles}/>
+            {user == null ? undefined : <Avatar src={user.photoURL} style={avatarStyles}/>}
             <div className={style.frameText}>
                 <h3 className={style.h3}>{
                     user == null ? undefined : user.displayName
