@@ -2,11 +2,10 @@ import React from 'react'
 import Button from '@material-ui/core/Button'
 import Avatar  from '@material-ui/core/Avatar'
 import style from './SidebarFrame.module.css'
-import { useContext } from 'react';
-import { UserContext } from '../lib/context';
-import { googleSignOut } from "../lib/auth.js";
+import { signOutUser } from "../lib/auth";
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth } from '../lib/firebaseInit';
+import { googleSignIn } from "../lib/auth"
 
 function SidebarFrame() {
 
@@ -33,7 +32,12 @@ function SidebarFrame() {
                 <h3 className={style.h3}>{
                     user == null ? undefined : user.displayName
                 }</h3>
-                <Button variant="contained" style={buttonStyles} onClick={googleSignOut}>Log Out</Button>
+
+                {user 
+                ? 
+                <Button variant="contained" style={buttonStyles} onClick={signOutUser}>Log Out</Button> 
+                : 
+                <Button variant="contained" style={buttonStyles} onClick={googleSignIn}>Log In</Button> }
             </div>
         </div>
     )
