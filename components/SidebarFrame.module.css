@@ -1,18 +1,29 @@
 .sideBarFrame {
     width: 100%;
     height: 25%;
-    font-size: 1.1rem;
+    font-size: 1rem;
     border-bottom: 2px solid #5e81ac;
     display: flex;
     align-items: center;
     justify-content: space-around;
     font-family: 'Mulish', sans-serif;
+    
 }
 
+.sideBarText {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
 .h3 {
     font-weight: 700;
     font-style: normal;
     line-height: 24px;
     color: #88C0D0;
+    word-wrap: normal;
+    text-align: center;
 }
+
