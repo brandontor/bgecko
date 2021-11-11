@@ -1,4 +1,4 @@
-import style from './index.module.css'
+import style from '../styles/index.module.css'
 import Head from 'next/head'
 import Link from 'next/link'
 import Button from '@mui/material/Button';
@@ -36,15 +36,9 @@ export default function Home(data) {
       <main className={style.welcomePage}>
         <div className={style.textWrapper}>
           <h1>Welcome to bGecko <i className="fab fa-bitcoin" style={{color: "#f2a900"}}></i></h1>
-          {user
-          ?
-          <Link href="/home"><Button variant="contained" style={buttonStyles}>{user.displayName} Please Continue :)</Button></Link>
-          :
-          <Button variant="contained" style={buttonStyles} onClick={googleSignIn}>Sign In</Button>
-          }
+          {user ? <Link href="/home"><Button variant="contained" style={buttonStyles}>{user.displayName} Please Continue :)</Button></Link> : <Button variant="contained" style={buttonStyles} onClick={googleSignIn}>Sign In</Button> }
         </div> 
       </main>
     </div>
   )
 }
-
