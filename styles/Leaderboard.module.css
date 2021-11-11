@@ -1,5 +1,22 @@
 .leaderBoardContainer {
     width: 60%;
     height: 60%;
-    border: 2px solid white;
+    border-top: 2px solid #D8DEE9;
+}
+
+.leaderBoardHeader {
+    width: 100%;
+    height: 8%;
+    border-bottom: 2px solid #D8DEE9;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #D8DEE9;
+    font-family: 'Mulish', sans-serif;  
+    background-color: rgb(76, 86, 106, 0.3);
+}
+
+.leaderBoardHeader p {
+    font-weight: 700;
+    font-size: 1.1rem;
 }
