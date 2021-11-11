@@ -1,6 +1,6 @@
 import React from 'react'
-import {Button, Avatar} from '@material-ui/core';
-import style from './SidebarFrame.module.css'
+import { Button, Avatar } from '@material-ui/core';
+import style from '../styles/SidebarFrame.module.css'
 import { auth } from '../lib/firebaseInit';
 import { signOutUser, googleSignIn } from "../lib/auth";
 import { useAuthState } from 'react-firebase-hooks/auth';
