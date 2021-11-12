@@ -2,10 +2,12 @@ import React from 'react'
 import style from '../styles/Leaderboard.module.css'
 import LeaderboardItem from './LeaderboardItem'
 
+
 function Leaderboard() {
     return (
         <div className={style.leaderBoardContainer}>
             <div className={style.leaderBoardHeader}>
+                <p>star</p>
                 <p>#</p>
                 <p>Coin</p>
                 <p>Price</p>
