@@ -1,7 +1,7 @@
 import React from 'react'
 import style from '../styles/home.module.css'
 import Head from 'next/head'
-import Leaderboard from '../components/Leaderboard'
+import Leaderboard from '../components/home/leaderboard/Leaderboard'
 
 
 
