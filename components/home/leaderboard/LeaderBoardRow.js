@@ -5,16 +5,20 @@ import StarIcon from '@mui/icons-material/Star';
 
 function LeaderBoardRow() {
 
-    const [star, setStar] = useState()
+    const [star, setStar] = useState(false)
 
     const starHandler = () => {
-
+        if(star) {
+            setStar(false)
+        } else {
+            setStar(true)
+        }
     }
 
 
     return (
         <div className={style.container}>
-            <p><StarOutlineIcon></StarOutlineIcon></p>
+            <p onClick={starHandler}>{star ? <StarIcon></StarIcon> : <StarOutlineIcon></StarOutlineIcon>}</p>
             <p>#</p>
             <p>Coin</p>
             <p>Price</p>

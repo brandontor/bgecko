@@ -8,3 +8,7 @@
     height: 9%;
     padding-right: 10px;
 }
+
+.container :first-child {
+    cursor: pointer;
+}
