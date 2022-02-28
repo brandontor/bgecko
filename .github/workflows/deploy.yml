@@ -5,7 +5,7 @@ on:
     branches: [master]
     
 jobs:
-  install-dependencies:
+  install-dependencies-deploy:
     name: Install-dependencies
     runs-on: ubuntu-latest
     steps: 
@@ -17,17 +17,9 @@ jobs:
       run: npm run clean
     - name: Run build
       run: npm run build
-      
-  deploy:
-    name: deploy
-    needs: install-dependencies
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@master 
-      - name: Deploy to Firebase
-        uses: w9jds/firebase-action@master
-        with:
+    - name: Deploy to Firebase
+      uses: w9jds/firebase-action@master
+      with:
           args: deploy --only hosting
-        env:
+      env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
