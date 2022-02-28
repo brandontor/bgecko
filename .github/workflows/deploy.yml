@@ -13,17 +13,18 @@ jobs:
       uses: actions/checkout@master
     - name: Install dependencies
       run: npm ci
-  run-clean-build-export-deploy:
-    name: Run-Clean-Build-Export
+    - name: Run clean
+      run: npm run clean
+    - name: Run build
+      run: npm run build
+      
+  deploy:
+    name: deploy
     needs: install-dependencies
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@master 
-      - name: Run clean
-        run: npm run clean
-      - name: Run build
-        run: npm run build
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
