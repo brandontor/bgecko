@@ -7,7 +7,7 @@ function Layout({ children }) {
             <Sidebar/>
             <main className={style.main}>
                 <header className={style.header}>
-                    <h1>bGecko<i className="fab fa-bitcoin"></i></h1>
+                    <h1>aBecko<i className="fab fa-bitcoin"></i></h1>
                 </header>
                 {children}
             </main>
