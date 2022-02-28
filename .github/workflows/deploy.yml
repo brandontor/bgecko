@@ -23,6 +23,7 @@ jobs:
       - name: Run clean
         run: npm run clean
       - name: Run build
+        run: npm run build
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
