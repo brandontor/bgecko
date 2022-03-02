@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
       - name: Install dependencies
         run: npm ci
       - name: Run clean
@@ -17,7 +17,7 @@ jobs:
       - name: Run build
         run: npm run build
       - name: deploy
-        uses: FirebaseExtended/action-hosting-deploy@v0
+      - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: "${{ secrets.FIREBASE_TOKEN }}"
           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_BGECKO_A882B }}"
