@@ -16,7 +16,8 @@ jobs:
         run: npm run clean
       - name: Run build
         run: npm run build
-      - uses: FirebaseExtended/action-hosting-deploy@v0
+      - name: deploy
+        uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: "${{ secrets.FIREBASE_TOKEN }}"
           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_BGECKO_A882B }}"
