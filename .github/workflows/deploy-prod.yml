@@ -8,7 +8,6 @@ jobs:
   deploy_live:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
       - uses: actions/checkout@v2
       - name: Install dependencies
         run: npm ci
@@ -16,7 +15,6 @@ jobs:
         run: npm run clean
       - name: Run build
         run: npm run build
-      - name: deploy
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: "${{ secrets.FIREBASE_TOKEN }}"
