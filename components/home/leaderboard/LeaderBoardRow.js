@@ -3,7 +3,7 @@ import style from './LeaderBoardRow.module.css'
 import StarOutlineIcon from '@mui/icons-material/StarOutline';
 import StarIcon from '@mui/icons-material/Star';
 
-function LeaderBoardRow() {
+function LeaderBoardRow({name, symbol, market_cap, market_cap_change_percentage_24h, market_cap_rank, image, current_price }) {
 
     const [star, setStar] = useState(false)
 
@@ -15,15 +15,21 @@ function LeaderBoardRow() {
         }
     }
 
+      //leaderBoardData.name
+        //.symbol
+        //.market_cap
+        //.market_cap_change_percentage_24h
+        //.image
+        //.symbol
 
     return (
         <div className={style.container}>
             <p onClick={starHandler}>{star ? <StarIcon></StarIcon> : <StarOutlineIcon></StarOutlineIcon>}</p>
-            <p>#</p>
-            <p>Coin</p>
-            <p>Price</p>
-            <p>24h</p>
-            <p>Mkt Cap</p>
+            <p>{market_cap_rank}</p>
+            <p>{name}</p>
+            <p>{current_price}</p>
+            <p>{market_cap_change_percentage_24h}</p>
+            <p>{market_cap}</p>
         </div>
     )
 }
