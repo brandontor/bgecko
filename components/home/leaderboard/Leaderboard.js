@@ -19,22 +19,24 @@ function Leaderboard({leaderBoardData, loading}) {
     const indexOfFirstPost = indexOfLastPost - postsPerPage;
     const currentPosts = leaderBoardData.slice(indexOfFirstPost, indexOfLastPost)
     const paginate = (pageNumber) => {
+        console.log('this is page Number', pageNumber)
         if (pageNumber.getAttribute("aria-label") === "Go to next page") {
             console.log('go to next page dude')
-            return setCurrentPage(currentPage + 1)
-        }
-        if (pageNumber.getAttribute("aria-label") === "Go to previous page") {
+            setCurrentPage(currentPage + 1)
+            console.log(currentPage)
+        } else if (pageNumber.getAttribute("aria-label") === "Go to previous page") {
             console.log('go to previous page dude')
-            return setCurrentPage(currentPage - 1)
+            setCurrentPage(currentPage - 1)
+        } else {
+            setCurrentPage(parseInt(pageNumber.innerText))
+            console.log('I pressed something', currentPage)
         }
-        return setCurrentPage(pageNumber.innerText)
     }
 
     const Numbers = []
     for(let i=1; i <= Math.ceil(leaderBoardData.length/postsPerPage); i++) {
         Numbers.push(i)
     }
-    console.log(Numbers)
     //leaderBoardData.name
     //.symbol
     //.market_cap
