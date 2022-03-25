@@ -3,6 +3,7 @@ import style from './Leaderboard.module.css'
 import LeaderBoardHeader from './LeaderBoardHeader'
 import LeaderBoardRow from './LeaderBoardRow'
 import Pagination from '@mui/material/Pagination';
+import { StylesContext } from '@material-ui/styles';
 // import Pagination from './Pagination'
 
 function Leaderboard({leaderBoardData, loading}) {
@@ -19,22 +20,24 @@ function Leaderboard({leaderBoardData, loading}) {
     const indexOfFirstPost = indexOfLastPost - postsPerPage;
     const currentPosts = leaderBoardData.slice(indexOfFirstPost, indexOfLastPost)
     const paginate = (pageNumber) => {
+        console.log('this is page Number', pageNumber)
         if (pageNumber.getAttribute("aria-label") === "Go to next page") {
             console.log('go to next page dude')
-            return setCurrentPage(currentPage + 1)
-        }
-        if (pageNumber.getAttribute("aria-label") === "Go to previous page") {
+            setCurrentPage(currentPage + 1)
+            console.log(currentPage)
+        } else if (pageNumber.getAttribute("aria-label") === "Go to previous page") {
             console.log('go to previous page dude')
-            return setCurrentPage(currentPage - 1)
+            setCurrentPage(currentPage - 1)
+        } else {
+            setCurrentPage(parseInt(pageNumber.innerText))
+            console.log('I pressed something', currentPage)
         }
-        return setCurrentPage(pageNumber.innerText)
     }
 
     const Numbers = []
     for(let i=1; i <= Math.ceil(leaderBoardData.length/postsPerPage); i++) {
         Numbers.push(i)
     }
-    console.log(Numbers)
     //leaderBoardData.name
     //.symbol
     //.market_cap
@@ -51,7 +54,10 @@ function Leaderboard({leaderBoardData, loading}) {
                 const params = {name, symbol, market_cap, market_cap_change_percentage_24h, market_cap_rank, image, current_price}
               return <LeaderBoardRow key={index} {...params} ></LeaderBoardRow>
             })}
-            <Pagination ref={pageRef} page={currentPage} count={Numbers.length} color="primary" onChange={(e)=>{paginate(e.currentTarget)}}></Pagination>
+            <div className={style.paginationContainer}>
+            <Pagination ref={pageRef} page={currentPage} count={Numbers.length} shape="rounded"  onChange={(e)=>{paginate(e.currentTarget)}}></Pagination>
+            </div>
+            
             {/* <Pagination totalPosts={leaderBoardData.length} postsPerPage={postsPerPage} paginate={paginate}></Pagination> */}
         </div>
     )

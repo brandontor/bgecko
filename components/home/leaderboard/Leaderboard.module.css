@@ -2,3 +2,8 @@
     width: 60%;
     height: 63%;
 }
+
+.paginationContainer{
+    margin-top: 0.5rem;
+    color: #fff;
+}
