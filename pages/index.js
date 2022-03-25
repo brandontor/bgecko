@@ -23,7 +23,6 @@ export default function Home(data) {
 
   return (
     <div>
- 
       <main className={style.welcomePage}>
         <div className={style.textWrapper}>
           <h1>Welcome to bGecko <i className="fab fa-bitcoin" style={{color: "#f2a900"}}></i></h1>

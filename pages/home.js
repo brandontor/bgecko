@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react'
 import style from '../styles/home.module.css'
-import Head from 'next/head'
 import Leaderboard from '../components/home/leaderboard/Leaderboard'
 import handler from './api/home'
+import SearchBar from '../components/home/searchbar/SearchBar'
 
 function Home({}) {
     const [leaderBoardData, setLeaderBoardData] = useState()
@@ -30,9 +30,10 @@ function Home({}) {
     
     return (
         <div className={style.home}>
-            <Head>
-                <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossOrigin="anonymous"></link>
-            </Head>
+            <header className={style.header}>
+                    <h1>aBecko<i className="fab fa-bitcoin"></i></h1>
+                    <SearchBar></SearchBar>
+            </header>
             <Leaderboard leaderBoardData={leaderBoardData} loading={loading}/>
         </div>
     )

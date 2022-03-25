@@ -14,14 +14,3 @@
     flex-direction: column;
 }
 
-.header {
-    height: 8%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    color: #ECEFF4;
-}
-
-.header i {
-    color: #f2a900;
-}
