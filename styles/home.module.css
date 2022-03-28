@@ -9,12 +9,16 @@
 
 .header {
     height: 8%;
-    width: 100%;
+    width: 85%;
     display: flex;
     justify-content: center;
+    align-items: center;
     color: #ECEFF4;
+    position: absolute;
+    top: 0.5rem;
 }
 
 .header i {
     color: #f2a900;
 }
+

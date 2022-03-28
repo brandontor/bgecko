@@ -31,7 +31,7 @@ function Home({}) {
     return (
         <div className={style.home}>
             <header className={style.header}>
-                    <h1>aBecko<i className="fab fa-bitcoin"></i></h1>
+                    <h1>bGecko<i className="fab fa-bitcoin"></i></h1>
                     <SearchBar></SearchBar>
             </header>
             <Leaderboard leaderBoardData={leaderBoardData} loading={loading}/>
