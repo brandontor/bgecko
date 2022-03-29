@@ -3,7 +3,6 @@ import style from './Leaderboard.module.css'
 import LeaderBoardHeader from './LeaderBoardHeader'
 import LeaderBoardRow from './LeaderBoardRow'
 import Pagination from '@mui/material/Pagination';
-import { StylesContext } from '@material-ui/styles';
 // import Pagination from './Pagination'
 
 function Leaderboard({leaderBoardData, loading}) {
@@ -55,7 +54,7 @@ function Leaderboard({leaderBoardData, loading}) {
               return <LeaderBoardRow key={index} {...params} ></LeaderBoardRow>
             })}
             <div className={style.paginationContainer}>
-            <Pagination ref={pageRef} page={currentPage} count={Numbers.length} shape="rounded"  onChange={(e)=>{paginate(e.currentTarget)}}></Pagination>
+            <Pagination ref={pageRef} page={currentPage} count={Numbers.length} shape="rounded" color='primary'  onChange={(e)=>{paginate(e.currentTarget)}}></Pagination>
             </div>
             
             {/* <Pagination totalPosts={leaderBoardData.length} postsPerPage={postsPerPage} paginate={paginate}></Pagination> */}

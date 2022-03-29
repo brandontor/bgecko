@@ -9,9 +9,13 @@ function SearchBar() {
 
   return (
     <div className={style.search}>
-        <TextField color='primary' id="standard-basic" label="Search" variant="standard"></TextField>
+        <TextField color="primary" id="standard-basic" label="Search" variant="standard" sx={{
+    '& .MuiInput-underline:before': { borderBottomColor: '#D8DEE9' },
+    '& .MuiInput-underline:after': { borderBottomColor: '#D8DEE9' },'& .MuiInput-underline:hover:before': { borderBottomColor: '#D8DEE9' },
+  }}></TextField>
     </div>
   )
 }
+// InputProps={{ disableUnderline: true,}}
 
 export default SearchBar
