@@ -3,3 +3,13 @@
     right: 20%;
 }
 
+.dropDown {
+    margin-top: 1px;
+    border-radius: 0px 0px 5px 5px;
+    border: 2px solid #D8DEE9;
+    height: 20rem;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(67, 76, 94, 0.85);
+    box-shadow: 1px 0px 3px 1px rgba(216, 222, 233, 0.125);
+}
